@@ -1,8 +1,12 @@
 from __future__ import annotations
 
+import os
+from pathlib import Path
 from typing import Union
 from fastapi import FastAPI, Request, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 import json
 import httpx
@@ -19,6 +23,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Serve built frontend in production
+FRONTEND_DIR = Path(__file__).resolve().parent.parent.parent / "frontend" / "dist"
 
 
 class URLRequest(BaseModel):
@@ -87,3 +94,25 @@ async def validate_url(request: URLRequest):
 
     result = validate_bods_data(data)
     return result
+
+
+# --- Serve frontend static files in production ---
+if FRONTEND_DIR.exists():
+    # Mount static assets (JS, CSS, images)
+    app.mount("/assets", StaticFiles(directory=FRONTEND_DIR / "assets"), name="assets")
+    app.mount(
+        "/bods-images",
+        StaticFiles(directory=FRONTEND_DIR / "bods-images"),
+        name="bods-images",
+    )
+    app.mount(
+        "/lib", StaticFiles(directory=FRONTEND_DIR / "lib"), name="lib"
+    )
+
+    @app.get("/{path:path}")
+    async def serve_spa(path: str):
+        """Serve the SPA — return index.html for all non-API, non-asset routes."""
+        file_path = FRONTEND_DIR / path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(file_path)
+        return FileResponse(FRONTEND_DIR / "index.html")

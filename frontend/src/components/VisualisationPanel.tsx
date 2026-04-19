@@ -212,7 +212,7 @@ export default function VisualisationPanel({ data }: Props) {
 
     try {
       await loadScript(
-        "/node_modules/@openownership/bods-dagre/dist/bods-dagre.js"
+        "/lib/bods-dagre.js"
       );
 
       if (!window.BODSDagre) {
