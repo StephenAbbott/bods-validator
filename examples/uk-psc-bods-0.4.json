@@ -1,0 +1,238 @@
+[
+  {
+    "statementId": "f1a2b3c4-d5e6-7890-abcd-ef0123456001",
+    "declarationSubject": "uk-entity-greenfield-energy",
+    "recordId": "uk-entity-greenfield-energy",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "GREENFIELD ENERGY HOLDINGS LTD",
+      "jurisdiction": {
+        "name": "United Kingdom",
+        "code": "GB"
+      },
+      "identifiers": [
+        {
+          "id": "12345678",
+          "scheme": "GB-COH",
+          "schemeName": "Companies House"
+        }
+      ],
+      "addresses": [
+        {
+          "type": "registered",
+          "address": "71-75 Shelton Street, Covent Garden, London",
+          "postCode": "WC2H 9JQ",
+          "country": {
+            "name": "United Kingdom",
+            "code": "GB"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — UK PSC mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from UK Companies House People with Significant Control (PSC) register",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    }
+  },
+  {
+    "statementId": "f1a2b3c4-d5e6-7890-abcd-ef0123456002",
+    "declarationSubject": "uk-entity-greenfield-energy",
+    "recordId": "uk-person-sarah-turner",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "Mrs Sarah Elizabeth Turner",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "British",
+          "code": "GB"
+        }
+      ],
+      "birthDate": "1982-06",
+      "addresses": [
+        {
+          "type": "service",
+          "address": "71-75 Shelton Street, London",
+          "postCode": "WC2H 9JQ",
+          "country": {
+            "name": "United Kingdom",
+            "code": "GB"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — UK PSC mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from UK Companies House PSC register",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    }
+  },
+  {
+    "statementId": "f1a2b3c4-d5e6-7890-abcd-ef0123456003",
+    "declarationSubject": "uk-entity-greenfield-energy",
+    "recordId": "uk-entity-greenfield-ventures",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "GREENFIELD VENTURES LLP",
+      "jurisdiction": {
+        "name": "United Kingdom",
+        "code": "GB"
+      },
+      "identifiers": [
+        {
+          "id": "OC456789",
+          "scheme": "GB-COH",
+          "schemeName": "Companies House"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — UK PSC mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from UK Companies House PSC register",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    }
+  },
+  {
+    "statementId": "f1a2b3c4-d5e6-7890-abcd-ef0123456004",
+    "declarationSubject": "uk-entity-greenfield-energy",
+    "recordId": "uk-rel-sarah-greenfield",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "uk-entity-greenfield-energy",
+      "interestedParty": "uk-person-sarah-turner",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "minimum": 75,
+            "maximum": 100
+          },
+          "startDate": "2019-03-12"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "minimum": 75,
+            "maximum": 100
+          },
+          "startDate": "2019-03-12"
+        },
+        {
+          "type": "appointmentOfBoard",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "startDate": "2019-03-12"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — UK PSC mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from UK Companies House PSC register",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    }
+  },
+  {
+    "statementId": "f1a2b3c4-d5e6-7890-abcd-ef0123456005",
+    "declarationSubject": "uk-entity-greenfield-energy",
+    "recordId": "uk-rel-ventures-greenfield",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "uk-entity-greenfield-energy",
+      "interestedParty": "uk-entity-greenfield-ventures",
+      "interests": [
+        {
+          "type": "otherInfluenceOrControl",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "startDate": "2020-06-15"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — UK PSC mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from UK Companies House PSC register",
+      "url": "https://find-and-update.company-information.service.gov.uk/"
+    }
+  }
+]

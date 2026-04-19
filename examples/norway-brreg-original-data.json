@@ -1,0 +1,163 @@
+{
+  "organisasjonsnummer": "930185930",
+  "foerstRegistrertIRegisterOverReelleRettighetshavere": "2024-09-26T10:22:02.634Z",
+  "registreringer": [
+    {
+      "registreringsid": "0198c614-dfcc-4e65-bc96-4fdaf2c2c22b",
+      "registreringsstatus": {
+        "kode": "registreringsstatus.rettighetsinformasjonErRegistrert",
+        "kodenavn": "Rettighetsinformasjon er registrert"
+      },
+      "registrert": "2024-10-08T13:11:28.956Z",
+      "erGjeldendeRegistrering": false,
+      "reelleRettighetshaverestatus": {
+        "kode": "reellerettighetshaverestatus.harReelleRettighetshavere",
+        "kodenavn": "Virksomheten har meldt at de har reelle rettighetshavere, og at alle reelle rettighetshavere er identifisert"
+      },
+      "reelleRettighetshavere": [
+        {
+          "folkeregistrertPerson": {
+            "foedselsdato": "1961-07-25",
+            "foedselsaar": "1961",
+            "navn": {
+              "fornavn": "JOHAN HENRIK",
+              "etternavn": "ANDRESEN"
+            },
+            "erDoed": false,
+            "bostedsland": {
+              "landkode": "NOR",
+              "navn": "Norge"
+            },
+            "statsborgerskap": [
+              {
+                "landkode": "NOR",
+                "navn": "Norge"
+              }
+            ]
+          },
+          "erUnntattFraInnsyn": false,
+          "foerstRegistrert": "2024-10-08T13:11:28.657Z",
+          "endret": "2024-10-08T13:11:28.657Z",
+          "posisjoner": [
+            {
+              "posisjonstype": {
+                "kode": "posisjonstype.kontrollOverStemmerettigheter",
+                "kodenavn": "Kontroll over stemmerettigheter"
+              },
+              "stoerrelsesintervall": {
+                "kode": "stoerrelsesintervall.intervall2",
+                "kodenavn": "50% - 74,99%"
+              },
+              "grunnlagstyper": [
+                {
+                  "kode": "grunnlagstype.enighetEllerAvtale",
+                  "kodenavn": "Enighet eller avtale"
+                }
+              ],
+              "mellomliggendeVirksomheter": []
+            }
+          ]
+        },
+        {
+          "folkeregistrertPerson": {
+            "foedselsdato": "1995-05-21",
+            "foedselsaar": "1995",
+            "navn": {
+              "fornavn": "KATHARINA",
+              "mellomnavn": "KVASNES",
+              "etternavn": "ANDRESEN"
+            },
+            "erDoed": false,
+            "bostedsland": {
+              "landkode": "NOR",
+              "navn": "Norge"
+            },
+            "statsborgerskap": [
+              {
+                "landkode": "NOR",
+                "navn": "Norge"
+              }
+            ]
+          },
+          "erUnntattFraInnsyn": false,
+          "foerstRegistrert": "2024-10-08T13:11:28.657Z",
+          "endret": "2024-10-08T13:11:28.657Z",
+          "posisjoner": [
+            {
+              "posisjonstype": {
+                "kode": "posisjonstype.eierskap",
+                "kodenavn": "Eierskap"
+              },
+              "stoerrelsesintervall": {
+                "kode": "stoerrelsesintervall.intervall1",
+                "kodenavn": "25,01% - 49,99%"
+              },
+              "grunnlagstyper": [
+                {
+                  "kode": "grunnlagstype.indirekte",
+                  "kodenavn": "Indirekte"
+                }
+              ],
+              "mellomliggendeVirksomheter": [
+                {
+                  "norskVirksomhet": {
+                    "organisasjonsnummer": "921903766"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "folkeregistrertPerson": {
+            "foedselsdato": "1996-07-23",
+            "foedselsaar": "1996",
+            "navn": {
+              "fornavn": "ALEXANDRA",
+              "etternavn": "ANDRESEN-THOMPSON"
+            },
+            "erDoed": false,
+            "bostedsland": {
+              "landkode": "NOR",
+              "navn": "Norge"
+            },
+            "statsborgerskap": [
+              {
+                "landkode": "NOR",
+                "navn": "Norge"
+              }
+            ]
+          },
+          "erUnntattFraInnsyn": false,
+          "foerstRegistrert": "2024-10-08T13:11:28.657Z",
+          "endret": "2024-10-08T13:11:28.657Z",
+          "posisjoner": [
+            {
+              "posisjonstype": {
+                "kode": "posisjonstype.eierskap",
+                "kodenavn": "Eierskap"
+              },
+              "stoerrelsesintervall": {
+                "kode": "stoerrelsesintervall.intervall1",
+                "kodenavn": "25,01% - 49,99%"
+              },
+              "grunnlagstyper": [
+                {
+                  "kode": "grunnlagstype.indirekte",
+                  "kodenavn": "Indirekte"
+                }
+              ],
+              "mellomliggendeVirksomheter": [
+                {
+                  "norskVirksomhet": {
+                    "organisasjonsnummer": "921903553"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

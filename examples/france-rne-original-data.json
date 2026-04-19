@@ -1,0 +1,117 @@
+{
+  "data": [
+    {
+      "uuid": "21120ee0-d42b-44f6-a462-d3724cf6aeaf",
+      "nom": "Dupont",
+      "nom_usage": null,
+      "prenoms": [
+        "Marie",
+        "Claire"
+      ],
+      "date_naissance": {
+        "annee": 1975,
+        "mois": 3
+      },
+      "nationalite": "Française",
+      "pays_residence": "France",
+      "modalites_de_controle": {
+        "detention_de_capital": {
+          "parts_directes": {
+            "pourcentage": 51.0,
+            "modalites": {
+              "pleine_propriete": true,
+              "nue_propriete": false
+            }
+          },
+          "parts_indirectes": {
+            "pourcentage": 10.0,
+            "modalites": {
+              "pleine_propriete": false,
+              "nue_propriete": true
+            },
+            "details_parts_indirectes": {
+              "via_indivision": false,
+              "via_personne_morale": true,
+              "details_en_personne_morale": [
+                {
+                  "denomination": "SCI DUPONT PATRIMOINE",
+                  "siren": "987654321"
+                }
+              ]
+            }
+          }
+        },
+        "detention_de_droits_de_vote": {
+          "parts_directes": {
+            "pourcentage": 51.0,
+            "modalites": {
+              "pleine_propriete": true,
+              "nue_propriete": false
+            }
+          },
+          "parts_indirectes": {
+            "pourcentage": 10.0,
+            "modalites": {
+              "pleine_propriete": false,
+              "nue_propriete": true
+            }
+          }
+        },
+        "pouvoirs_de_controle": {
+          "decision_ag": true,
+          "nomination_membres_conseil_administration": false
+        },
+        "representant_legal": false
+      }
+    },
+    {
+      "uuid": "c8f3a912-7b5e-4d1a-9c6f-e82b4a1f5d3e",
+      "nom": "Martin",
+      "nom_usage": null,
+      "prenoms": [
+        "Jean",
+        "Pierre"
+      ],
+      "date_naissance": {
+        "annee": 1968,
+        "mois": 11
+      },
+      "nationalite": "Française",
+      "pays_residence": "France",
+      "modalites_de_controle": {
+        "detention_de_capital": {
+          "parts_directes": {
+            "pourcentage": 30.0,
+            "modalites": {
+              "pleine_propriete": true,
+              "nue_propriete": false
+            }
+          },
+          "parts_indirectes": null
+        },
+        "detention_de_droits_de_vote": {
+          "parts_directes": {
+            "pourcentage": 30.0,
+            "modalites": {
+              "pleine_propriete": true,
+              "nue_propriete": false
+            }
+          },
+          "parts_indirectes": null
+        },
+        "pouvoirs_de_controle": {
+          "decision_ag": false,
+          "nomination_membres_conseil_administration": false
+        },
+        "representant_legal": true
+      }
+    }
+  ],
+  "meta": {
+    "nombre_beneficiaires": 2,
+    "uuids_beneficiaires_sans_modalites": []
+  },
+  "links": {
+    "unite_legale": "https://entreprise.api.gouv.fr/v3/inpi/rne/unites_legales/123456789"
+  }
+}

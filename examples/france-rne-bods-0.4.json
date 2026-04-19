@@ -1,0 +1,323 @@
+[
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd01",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-entity-sarl-dupont",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "SARL DUPONT TECHNOLOGIES",
+      "jurisdiction": {
+        "name": "France",
+        "code": "FR"
+      },
+      "identifiers": [
+        {
+          "id": "123456789",
+          "scheme": "FR-RCS",
+          "schemeName": "Registre du Commerce et des Sociétés (SIREN)"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE (Registre National des Entreprises) via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd02",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-entity-sci-dupont",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "SCI DUPONT PATRIMOINE",
+      "jurisdiction": {
+        "name": "France",
+        "code": "FR"
+      },
+      "identifiers": [
+        {
+          "id": "987654321",
+          "scheme": "FR-RCS",
+          "schemeName": "Registre du Commerce et des Sociétés (SIREN)"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd03",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-person-marie-dupont",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "Marie Claire Dupont",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "French",
+          "code": "FR"
+        }
+      ],
+      "birthDate": "1975-03"
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd04",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-person-jean-martin",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "Jean Pierre Martin",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "French",
+          "code": "FR"
+        }
+      ],
+      "birthDate": "1968-11"
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd05",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-rel-dupont-direct",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "fr-entity-sarl-dupont",
+      "interestedParty": "fr-person-marie-dupont",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 51
+          },
+          "startDate": "2024-01-01"
+        },
+        {
+          "type": "shareholding",
+          "directOrIndirect": "indirect",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 10
+          },
+          "startDate": "2024-01-01"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 51
+          },
+          "startDate": "2024-01-01"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "indirect",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 10
+          },
+          "startDate": "2024-01-01"
+        },
+        {
+          "type": "otherInfluenceOrControl",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "startDate": "2024-01-01"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd06",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-rel-sci-sarl",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "fr-entity-sarl-dupont",
+      "interestedParty": "fr-entity-sci-dupont",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "share": {
+            "exact": 10
+          },
+          "startDate": "2024-01-01"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-1234-567890abcd07",
+    "declarationSubject": "fr-entity-sarl-dupont",
+    "recordId": "fr-rel-martin-direct",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "fr-entity-sarl-dupont",
+      "interestedParty": "fr-person-jean-martin",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 30
+          },
+          "startDate": "2024-01-01"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 30
+          },
+          "startDate": "2024-01-01"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — France RNE mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from French RNE via INPI API",
+      "url": "https://data.inpi.fr/"
+    }
+  }
+]

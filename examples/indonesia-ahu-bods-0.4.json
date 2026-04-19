@@ -1,0 +1,295 @@
+[
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-ef0123456789",
+    "declarationSubject": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordId": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "PT MAJU BERSAMA SEJAHTERA",
+      "jurisdiction": {
+        "name": "Indonesia",
+        "code": "ID"
+      },
+      "identifiers": [
+        {
+          "id": "AHU-0012345.AH.01.01.TAHUN 2020",
+          "schemeName": "Keputusan Menteri Hukum dan HAM (SK Kemenkumham)"
+        },
+        {
+          "id": "01.234.567.8-012.000",
+          "schemeName": "Nomor Pokok Wajib Pajak (NPWP)"
+        }
+      ],
+      "addresses": [
+        {
+          "type": "registered",
+          "address": "Jl. Sudirman No. 45, RT 001/RW 005, Kel. Senayan, Kec. Kebayoran Baru",
+          "postCode": "12190",
+          "country": {
+            "name": "Indonesia",
+            "code": "ID"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Indonesia mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from AHU (Administrasi Hukum Umum) beneficial ownership register, Ministry of Law and Human Rights, Republic of Indonesia",
+      "url": "https://ahu.go.id"
+    }
+  },
+  {
+    "statementId": "b2c3d4e5-f6a1-7890-abcd-ef1234567890",
+    "declarationSubject": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordId": "idn-person-budi-santoso",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "Budi Santoso",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "Indonesia",
+          "code": "ID"
+        }
+      ],
+      "birthDate": "1975-08-20",
+      "addresses": [
+        {
+          "type": "residence",
+          "address": "Jl. Gatot Subroto No. 12, Jakarta Selatan",
+          "country": {
+            "name": "Indonesia",
+            "code": "ID"
+          }
+        }
+      ],
+      "identifiers": [
+        {
+          "id": "3171012345670001",
+          "scheme": "IDN-NIK",
+          "schemeName": "Nomor Induk Kependudukan (NIK)"
+        },
+        {
+          "id": "09.876.543.2-012.000",
+          "scheme": "IDN-NPWP",
+          "schemeName": "Nomor Pokok Wajib Pajak (NPWP)"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Indonesia mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from AHU beneficial ownership register",
+      "url": "https://ahu.go.id"
+    }
+  },
+  {
+    "statementId": "c3d4e5f6-a1b2-7890-abcd-ef2345678901",
+    "declarationSubject": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordId": "idn-person-siti-rahayu",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "Siti Rahayu",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "Indonesia",
+          "code": "ID"
+        }
+      ],
+      "birthDate": "1980-12-05",
+      "addresses": [
+        {
+          "type": "residence",
+          "address": "Jl. Thamrin No. 88, Jakarta Pusat",
+          "country": {
+            "name": "Indonesia",
+            "code": "ID"
+          }
+        }
+      ],
+      "identifiers": [
+        {
+          "id": "3171012345670002",
+          "scheme": "IDN-NIK",
+          "schemeName": "Nomor Induk Kependudukan (NIK)"
+        },
+        {
+          "id": "08.765.432.1-012.000",
+          "scheme": "IDN-NPWP",
+          "schemeName": "Nomor Pokok Wajib Pajak (NPWP)"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Indonesia mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from AHU beneficial ownership register",
+      "url": "https://ahu.go.id"
+    }
+  },
+  {
+    "statementId": "d4e5f6a1-b2c3-7890-abcd-ef3456789012",
+    "declarationSubject": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordId": "idn-rel-budi-ptmaju",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "idn-entity-pt-maju-bersama-sejahtera",
+      "interestedParty": "idn-person-budi-santoso",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 60
+          },
+          "startDate": "2020-03-15"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 60
+          },
+          "startDate": "2020-03-15"
+        },
+        {
+          "type": "rightsToProfitOrIncome",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 60
+          },
+          "startDate": "2020-03-15"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Indonesia mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from AHU beneficial ownership register",
+      "url": "https://ahu.go.id"
+    }
+  },
+  {
+    "statementId": "e5f6a1b2-c3d4-7890-abcd-ef4567890123",
+    "declarationSubject": "idn-entity-pt-maju-bersama-sejahtera",
+    "recordId": "idn-rel-siti-ptmaju",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "idn-entity-pt-maju-bersama-sejahtera",
+      "interestedParty": "idn-person-siti-rahayu",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 40
+          },
+          "startDate": "2020-03-15"
+        },
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 40
+          },
+          "startDate": "2020-03-15"
+        },
+        {
+          "type": "rightsToProfitOrIncome",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "exact": 40
+          },
+          "startDate": "2020-03-15"
+        }
+      ]
+    },
+    "statementDate": "2024-06-01",
+    "publicationDetails": {
+      "publicationDate": "2024-06-01T00:00:00Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Indonesia mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from AHU beneficial ownership register",
+      "url": "https://ahu.go.id"
+    }
+  }
+]

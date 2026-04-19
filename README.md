@@ -4,6 +4,8 @@ An online tool for validating beneficial ownership data against the [Beneficial 
 
 ![BODS Validator](https://img.shields.io/badge/BODS-0.4.0-652eb1) ![Python](https://img.shields.io/badge/Python-3.9+-blue) ![React](https://img.shields.io/badge/React-18-61dafb) ![License](https://img.shields.io/badge/License-MIT-green)
 
+**Live demo:** [bods-validator.onrender.com](https://bods-validator.onrender.com/)
+
 ## Features
 
 - **Schema Validation** — Validate JSON data against the BODS 0.4 schema using [lib-cove-bods](https://pypi.org/project/libcovebods/), which performs JSON schema validation plus 26 additional compliance checks

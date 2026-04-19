@@ -4,6 +4,7 @@ interface Props {
   originalData: any;
   originalFormat: string;
   bodsData: string;
+  exampleId?: string;
 }
 
 function downloadJson(content: string, filename: string) {
@@ -35,7 +36,11 @@ export default function DataComparisonPanel({
   originalData,
   originalFormat,
   bodsData,
+  exampleId,
 }: Props) {
+  const prefix = exampleId ? `${exampleId}-` : "";
+  const originalFilename = `${prefix}original-data.json`;
+  const bodsFilename = `${prefix}bods-0.4.json`;
   const [view, setView] = useState<"side-by-side" | "original" | "bods">(
     "side-by-side"
   );
@@ -120,7 +125,7 @@ export default function DataComparisonPanel({
                 <span className="text-xs bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded">
                   Original
                 </span>
-                <DownloadButton onClick={() => downloadJson(originalJson, "original-data.json")} label="original data" />
+                <DownloadButton onClick={() => downloadJson(originalJson, originalFilename)} label="original data" />
               </div>
               <pre className="text-xs bg-gray-50 p-3 rounded-lg border border-gray-200 overflow-auto max-h-80 font-mono">
                 {originalJson}
@@ -134,7 +139,7 @@ export default function DataComparisonPanel({
                 <span className="text-xs bg-[#652eb1]/10 text-[#652eb1] px-1.5 py-0.5 rounded">
                   Mapped
                 </span>
-                <DownloadButton onClick={() => downloadJson(bodsData, "bods-0.4.json")} label="BODS data" />
+                <DownloadButton onClick={() => downloadJson(bodsData, bodsFilename)} label="BODS data" />
               </div>
               <pre className="text-xs bg-gray-50 p-3 rounded-lg border border-gray-200 overflow-auto max-h-80 font-mono">
                 {bodsData}
@@ -147,7 +152,7 @@ export default function DataComparisonPanel({
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">{originalFormat}</span>
-              <DownloadButton onClick={() => downloadJson(originalJson, "original-data.json")} label="original data" />
+              <DownloadButton onClick={() => downloadJson(originalJson, originalFilename)} label="original data" />
             </div>
             <pre className="text-xs bg-gray-50 p-3 rounded-lg border border-gray-200 overflow-auto max-h-96 font-mono">
               {originalJson}
@@ -159,7 +164,7 @@ export default function DataComparisonPanel({
           <div>
             <div className="flex items-center gap-2 mb-2">
               <span className="text-xs font-semibold text-gray-500 uppercase tracking-wider">BODS 0.4</span>
-              <DownloadButton onClick={() => downloadJson(bodsData, "bods-0.4.json")} label="BODS data" />
+              <DownloadButton onClick={() => downloadJson(bodsData, bodsFilename)} label="BODS data" />
             </div>
             <pre className="text-xs bg-gray-50 p-3 rounded-lg border border-gray-200 overflow-auto max-h-96 font-mono">
               {bodsData}

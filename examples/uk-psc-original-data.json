@@ -1,0 +1,73 @@
+{
+  "company_number": "12345678",
+  "data": {
+    "company_name": "GREENFIELD ENERGY HOLDINGS LTD",
+    "company_number": "12345678",
+    "registered_office_address": {
+      "address_line_1": "71-75 Shelton Street",
+      "address_line_2": "Covent Garden",
+      "locality": "London",
+      "postal_code": "WC2H 9JQ",
+      "country": "United Kingdom"
+    },
+    "sic_codes": [
+      "35110"
+    ],
+    "date_of_creation": "2019-03-12",
+    "type": "ltd",
+    "jurisdiction": "england-wales",
+    "persons_with_significant_control": [
+      {
+        "kind": "individual-person-with-significant-control",
+        "name": "Mrs Sarah Elizabeth Turner",
+        "name_elements": {
+          "title": "Mrs",
+          "forename": "Sarah",
+          "middle_name": "Elizabeth",
+          "surname": "Turner"
+        },
+        "nationality": "British",
+        "country_of_residence": "England",
+        "address": {
+          "premises": "71-75",
+          "address_line_1": "Shelton Street",
+          "locality": "London",
+          "postal_code": "WC2H 9JQ",
+          "country": "United Kingdom"
+        },
+        "date_of_birth": {
+          "month": 6,
+          "year": 1982
+        },
+        "notified_on": "2019-03-12",
+        "natures_of_control": [
+          "ownership-of-shares-75-to-100-percent",
+          "voting-rights-75-to-100-percent",
+          "right-to-appoint-and-remove-directors"
+        ]
+      },
+      {
+        "kind": "corporate-entity-person-with-significant-control",
+        "name": "GREENFIELD VENTURES LLP",
+        "address": {
+          "premises": "20",
+          "address_line_1": "Fenchurch Street",
+          "locality": "London",
+          "postal_code": "EC3M 3BY",
+          "country": "United Kingdom"
+        },
+        "identification": {
+          "legal_authority": "Companies Act 2006",
+          "legal_form": "Limited Liability Partnership",
+          "place_registered": "England And Wales",
+          "registration_number": "OC456789",
+          "country_registered": "United Kingdom"
+        },
+        "notified_on": "2020-06-15",
+        "natures_of_control": [
+          "significant-influence-or-control"
+        ]
+      }
+    ]
+  }
+}

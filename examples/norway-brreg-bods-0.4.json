@@ -1,0 +1,554 @@
+[
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor001entity01",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-entity-ferd-as",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "FERD AS",
+      "jurisdiction": {
+        "name": "Norway",
+        "code": "NO"
+      },
+      "identifiers": [
+        {
+          "id": "930185930",
+          "scheme": "NO-BRC",
+          "schemeName": "Brønnøysund Register Centre"
+        }
+      ],
+      "addresses": [
+        {
+          "type": "registered",
+          "address": "Strandveien 50, Lysaker",
+          "country": {
+            "name": "Norway",
+            "code": "NO"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian Register of Beneficial Owners (Register over reelle rettighetshavere)",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor002entity02",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-entity-intermediary-766",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "Intermediary entity (org.nr. 921903766)",
+      "jurisdiction": {
+        "name": "Norway",
+        "code": "NO"
+      },
+      "identifiers": [
+        {
+          "id": "921903766",
+          "scheme": "NO-BRC",
+          "schemeName": "Brønnøysund Register Centre"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Intermediary company identified in Norwegian BO register",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor003entity03",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-entity-intermediary-553",
+    "recordType": "entity",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "entityType": {
+        "type": "registeredEntity"
+      },
+      "name": "Intermediary entity (org.nr. 921903553)",
+      "jurisdiction": {
+        "name": "Norway",
+        "code": "NO"
+      },
+      "identifiers": [
+        {
+          "id": "921903553",
+          "scheme": "NO-BRC",
+          "schemeName": "Brønnøysund Register Centre"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Intermediary company identified in Norwegian BO register",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor004person001",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-person-johan-andresen",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "JOHAN HENRIK ANDRESEN",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "Norwegian",
+          "code": "NO"
+        }
+      ],
+      "birthDate": "1961-07-25",
+      "addresses": [
+        {
+          "type": "residence",
+          "country": {
+            "name": "Norway",
+            "code": "NO"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian Register of Beneficial Owners",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor005person002",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-person-katharina-andresen",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "KATHARINA KVASNES ANDRESEN",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "Norwegian",
+          "code": "NO"
+        }
+      ],
+      "birthDate": "1995-05-21",
+      "addresses": [
+        {
+          "type": "residence",
+          "country": {
+            "name": "Norway",
+            "code": "NO"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian Register of Beneficial Owners",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor006person003",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-person-alexandra-andresen",
+    "recordType": "person",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "personType": "knownPerson",
+      "names": [
+        {
+          "fullName": "ALEXANDRA ANDRESEN-THOMPSON",
+          "type": "legal"
+        }
+      ],
+      "nationalities": [
+        {
+          "name": "Norwegian",
+          "code": "NO"
+        }
+      ],
+      "birthDate": "1996-07-23",
+      "addresses": [
+        {
+          "type": "residence",
+          "country": {
+            "name": "Norway",
+            "code": "NO"
+          }
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian Register of Beneficial Owners",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor007relat001",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-johan-ferd-voting",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-ferd-as",
+      "interestedParty": "nor-person-johan-andresen",
+      "interests": [
+        {
+          "type": "votingRights",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "minimum": 50,
+            "maximum": 75
+          },
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian BO register: kontrollOverStemmerettigheter 50%-74.99%",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor008relat002",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-katharina-intermediary",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-intermediary-766",
+      "interestedParty": "nor-person-katharina-andresen",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian BO register: indirect ownership via intermediary 921903766",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor009relat003",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-intermediary766-ferd",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-ferd-as",
+      "interestedParty": "nor-entity-intermediary-766",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "share": {
+            "minimum": 25,
+            "maximum": 50
+          },
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Intermediary company ownership in FERD AS (25.01%-49.99%)",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor010relat004",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-katharina-ferd-indirect",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-ferd-as",
+      "interestedParty": "nor-person-katharina-andresen",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "indirect",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "minimum": 25,
+            "maximum": 50
+          },
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian BO register: indirect eierskap 25.01%-49.99%",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor011relat005",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-alexandra-intermediary",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-intermediary-553",
+      "interestedParty": "nor-person-alexandra-andresen",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian BO register: indirect ownership via intermediary 921903553",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor012relat006",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-intermediary553-ferd",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-ferd-as",
+      "interestedParty": "nor-entity-intermediary-553",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "direct",
+          "beneficialOwnershipOrControl": false,
+          "share": {
+            "minimum": 25,
+            "maximum": 50
+          },
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Intermediary company ownership in FERD AS (25.01%-49.99%)",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  },
+  {
+    "statementId": "a1b2c3d4-e5f6-7890-abcd-nor013relat007",
+    "declarationSubject": "nor-entity-ferd-as",
+    "recordId": "nor-rel-alexandra-ferd-indirect",
+    "recordType": "relationship",
+    "recordStatus": "new",
+    "recordDetails": {
+      "isComponent": false,
+      "subject": "nor-entity-ferd-as",
+      "interestedParty": "nor-person-alexandra-andresen",
+      "interests": [
+        {
+          "type": "shareholding",
+          "directOrIndirect": "indirect",
+          "beneficialOwnershipOrControl": true,
+          "share": {
+            "minimum": 25,
+            "maximum": 50
+          },
+          "startDate": "2024-10-08"
+        }
+      ]
+    },
+    "statementDate": "2024-10-08",
+    "publicationDetails": {
+      "publicationDate": "2024-10-08T13:11:28Z",
+      "bodsVersion": "0.4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "publisher": {
+        "name": "BODS Validator — Norwegian BO register mapping example"
+      }
+    },
+    "source": {
+      "type": [
+        "officialRegister"
+      ],
+      "description": "Mapped from Norwegian BO register: indirect eierskap 25.01%-49.99%",
+      "url": "https://www.brreg.no/reelle-rettighetshavere/"
+    }
+  }
+]

@@ -1,0 +1,43 @@
+{
+  "status": 200,
+  "message": "Berhasil mendapatkan data",
+  "data": {
+    "nama_perseroan": "PT MAJU BERSAMA SEJAHTERA",
+    "no_sk": "AHU-0012345.AH.01.01.TAHUN 2020",
+    "tgl_sk": "2020-03-15",
+    "alamat": "Jl. Sudirman No. 45, RT 001/RW 005, Kel. Senayan, Kec. Kebayoran Baru",
+    "kota": "Jakarta Selatan",
+    "propinsi": "DKI Jakarta",
+    "kode_pos": "12190",
+    "npwp": "01.234.567.8-012.000",
+    "status_bo": "Sudah Lapor",
+    "beneficiary_owner": [
+      {
+        "nama_bo": "Budi Santoso",
+        "nik": "3171012345670001",
+        "tempat_lahir": "Jakarta",
+        "tgl_lahir": "1975-08-20",
+        "alamat_bo": "Jl. Gatot Subroto No. 12, Jakarta Selatan",
+        "kewarganegaraan": "Indonesia",
+        "npwp_bo": "09.876.543.2-012.000",
+        "kriteria_bo": "memiliki saham lebih dari 25%",
+        "persentase_saham": 60,
+        "persentase_hak_suara": 60,
+        "persentase_dividen": 60
+      },
+      {
+        "nama_bo": "Siti Rahayu",
+        "nik": "3171012345670002",
+        "tempat_lahir": "Bandung",
+        "tgl_lahir": "1980-12-05",
+        "alamat_bo": "Jl. Thamrin No. 88, Jakarta Pusat",
+        "kewarganegaraan": "Indonesia",
+        "npwp_bo": "08.765.432.1-012.000",
+        "kriteria_bo": "memiliki saham lebih dari 25%",
+        "persentase_saham": 40,
+        "persentase_hak_suara": 40,
+        "persentase_dividen": 40
+      }
+    ]
+  }
+}
