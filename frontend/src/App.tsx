@@ -189,32 +189,34 @@ function App() {
 
       {/* Icon strip */}
       <div
-        className="flex items-center gap-8 overflow-x-auto"
-        style={{ background: "var(--oo-burst)", padding: "20px 60px" }}
+        className="overflow-x-auto"
+        style={{ background: "#fff", padding: "20px 0", borderBottom: "1px solid var(--oo-rule)" }}
       >
-        <span
-          className="text-[10px] font-semibold uppercase shrink-0"
-          style={{ letterSpacing: "0.1em", color: "rgba(255,255,255,0.5)" }}
-        >
-          Entity Types
-        </span>
-        <div className="flex gap-5 items-center flex-wrap">
-          {ICON_TYPES.map((icon) => (
-            <div key={icon.label} className="flex flex-col items-center gap-1">
-              <img
-                src={icon.src}
-                alt={icon.label}
-                className="w-10 h-10 invert brightness-200"
-                style={{ objectFit: "contain" }}
-              />
-              <span
-                className="text-[9px] font-medium whitespace-nowrap"
-                style={{ color: "rgba(255,255,255,0.6)", letterSpacing: "0.04em" }}
-              >
-                {icon.label}
-              </span>
-            </div>
-          ))}
+        <div className="max-w-[1100px] mx-auto px-6 md:px-[60px] flex items-center justify-center gap-8">
+          <span
+            className="text-[10px] font-semibold uppercase shrink-0"
+            style={{ letterSpacing: "0.1em", color: "var(--oo-muted)" }}
+          >
+            Entity Types
+          </span>
+          <div className="flex gap-5 items-center flex-wrap justify-center">
+            {ICON_TYPES.map((icon) => (
+              <div key={icon.label} className="flex flex-col items-center gap-1">
+                <img
+                  src={icon.src}
+                  alt={icon.label}
+                  className="w-10 h-10"
+                  style={{ objectFit: "contain" }}
+                />
+                <span
+                  className="text-[9px] font-medium whitespace-nowrap"
+                  style={{ color: "var(--oo-muted)", letterSpacing: "0.04em" }}
+                >
+                  {icon.label}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
