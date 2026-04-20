@@ -13,6 +13,17 @@ import {
 } from "./api";
 import type { ValidationResult, ExampleSummary } from "./types";
 
+const ICON_TYPES = [
+  { src: "/bods-images/bovs-person.svg", label: "Person" },
+  { src: "/bods-images/bovs-organisation.svg", label: "Organisation" },
+  { src: "/bods-images/bovs-entity-unknown.svg", label: "Entity" },
+  { src: "/bods-images/bovs-arrangement.svg", label: "Arrangement" },
+  { src: "/bods-images/bovs-state.svg", label: "State" },
+  { src: "/bods-images/bovs-statebody.svg", label: "SOE" },
+  { src: "/bods-images/bovs-listed.svg", label: "Listed" },
+  { src: "/bods-images/bovs-unknown.svg", label: "Unknown" },
+];
+
 function App() {
   const [results, setResults] = useState<ValidationResult | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -108,93 +119,107 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ background: "var(--oo-bg)" }}>
       {/* Header */}
-      <header className="bg-[#1a1a2e] text-white">
-        <div className="max-w-5xl mx-auto px-4 py-6">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-3">
-              <img
-                src="/bods-images/bovs-organisation.svg"
-                alt=""
-                className="w-10 h-10 invert brightness-200"
-              />
-              <div>
-                <h1 className="text-2xl font-bold tracking-tight">
-                  BODS Validator
-                </h1>
-                <p className="text-gray-300 text-sm mt-0.5">
-                  Validate & visualise Beneficial Ownership Data
-                </p>
-              </div>
-            </div>
-            <div className="ml-auto flex items-center gap-3">
-              <a
-                href="https://standard.openownership.org/en/0.4.0/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                BODS 0.4.0 Standard
-              </a>
-              <span className="text-gray-600">|</span>
-              <a
-                href="https://www.openownership.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-gray-300 hover:text-white transition-colors"
-              >
-                Open Ownership
-              </a>
-            </div>
+      <header
+        className="text-white relative overflow-hidden"
+        style={{ background: "var(--oo-navy)", padding: "48px 0 40px" }}
+      >
+        {/* Radial gradient overlay */}
+        <div
+          className="absolute pointer-events-none"
+          style={{
+            right: -80,
+            top: -80,
+            width: 500,
+            height: 500,
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(61,48,212,0.28) 0%, transparent 70%)",
+          }}
+        />
+        <div className="max-w-[1100px] mx-auto px-6 md:px-[60px] relative z-10">
+          <div
+            className="text-[11px] font-semibold uppercase mb-3"
+            style={{ letterSpacing: "0.12em", color: "var(--oo-light)" }}
+          >
+            BODS Validator
           </div>
-        </div>
-        {/* Purple/cyan accent bar */}
-        <div className="h-1 flex">
-          <div className="flex-1 bg-[#652eb1]" />
-          <div className="flex-1 bg-[#349aee]" />
+          <h1
+            className="font-bold text-white"
+            style={{ fontSize: "clamp(24px, 4vw, 38px)", lineHeight: 1.15 }}
+          >
+            Validate & visualise beneficial ownership data
+          </h1>
+          <p
+            className="mt-3.5 max-w-[560px]"
+            style={{ fontSize: 15, lineHeight: 1.65, color: "rgba(255,255,255,0.72)" }}
+          >
+            Submit your JSON data to validate it against the{" "}
+            <a
+              href="https://standard.openownership.org/en/0.4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline"
+              style={{ color: "var(--oo-light)" }}
+            >
+              Beneficial Ownership Data Standard (BODS)
+            </a>
+            , get actionable guidance, and visualise ownership structures.
+          </p>
+          <div
+            className="inline-flex items-center gap-1.5 mt-5"
+            style={{
+              padding: "6px 12px",
+              borderRadius: 20,
+              border: "1px solid rgba(220,238,255,0.35)",
+              fontSize: 11,
+              fontWeight: 500,
+              color: "#dceeff",
+              letterSpacing: "0.04em",
+            }}
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M12 8v4m0 4h.01" />
+            </svg>
+            BODS 0.4.0 &middot; Open Ownership
+          </div>
         </div>
       </header>
 
-      {/* Main content */}
-      <main className="max-w-5xl mx-auto px-4 py-6 space-y-6">
-        {/* Intro banner */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5">
-          <div className="flex flex-col md:flex-row gap-4 items-start">
-            <div className="flex gap-3 shrink-0">
-              <img src="/bods-images/bovs-person.svg" alt="" className="w-8 h-8" />
-              <img src="/bods-images/bovs-organisation.svg" alt="" className="w-8 h-8" />
-              <img src="/bods-images/bovs-arrangement.svg" alt="" className="w-8 h-8" />
+      {/* Icon strip */}
+      <div
+        className="flex items-center gap-8 overflow-x-auto"
+        style={{ background: "var(--oo-burst)", padding: "20px 60px" }}
+      >
+        <span
+          className="text-[10px] font-semibold uppercase shrink-0"
+          style={{ letterSpacing: "0.1em", color: "rgba(255,255,255,0.5)" }}
+        >
+          Entity Types
+        </span>
+        <div className="flex gap-5 items-center flex-wrap">
+          {ICON_TYPES.map((icon) => (
+            <div key={icon.label} className="flex flex-col items-center gap-1">
+              <img
+                src={icon.src}
+                alt={icon.label}
+                className="w-10 h-10 invert brightness-200"
+                style={{ objectFit: "contain" }}
+              />
+              <span
+                className="text-[9px] font-medium whitespace-nowrap"
+                style={{ color: "rgba(255,255,255,0.6)", letterSpacing: "0.04em" }}
+              >
+                {icon.label}
+              </span>
             </div>
-            <div>
-              <p className="text-gray-700 text-sm">
-                The{" "}
-                <a
-                  href="https://standard.openownership.org/en/0.4.0/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#652eb1] font-medium hover:underline"
-                >
-                  Beneficial Ownership Data Standard (BODS)
-                </a>{" "}
-                provides a structured format for publishing information about
-                who owns and controls companies. Submit your JSON data to
-                validate it against the schema, get actionable guidance, and
-                visualise ownership structures using the{" "}
-                <a
-                  href="https://www.openownership.org/en/publications/beneficial-ownership-data-standard-visualisation-library/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#349aee] font-medium hover:underline"
-                >
-                  BODS Visualisation Library
-                </a>
-                .
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
+      </div>
 
+      {/* Main content */}
+      <main className="max-w-[1100px] mx-auto px-6 md:px-[60px] py-12 space-y-6">
         <ExamplesPanel
           examples={examples}
           onLoadExample={handleLoadExample}
@@ -220,7 +245,10 @@ function App() {
         />
 
         {error && (
-          <div className="bg-red-50 border border-red-200 rounded-xl p-4">
+          <div
+            className="bg-red-50 p-4"
+            style={{ border: "1px solid var(--oo-rule)", borderRadius: 10 }}
+          >
             <p className="text-red-700">{error}</p>
           </div>
         )}
@@ -232,80 +260,52 @@ function App() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#1a1a2e] text-gray-400 mt-12">
-        <div className="h-1 flex">
-          <div className="flex-1 bg-[#652eb1]" />
-          <div className="flex-1 bg-[#349aee]" />
-        </div>
-        <div className="max-w-5xl mx-auto px-4 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex items-center gap-3">
-              <img
-                src="/bods-images/bovs-organisation.svg"
-                alt=""
-                className="w-6 h-6 invert brightness-200"
-              />
-              <p className="text-sm">
-                Built on the{" "}
-                <a
-                  href="https://standard.openownership.org/en/0.4.0/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#c084fc] hover:text-white transition-colors"
-                >
-                  Beneficial Ownership Data Standard
-                </a>{" "}
-                by{" "}
-                <a
-                  href="https://www.openownership.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#c084fc] hover:text-white transition-colors"
-                >
-                  Open Ownership
-                </a>
-              </p>
-            </div>
-            <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-2 sm:gap-4 text-sm">
-              <a
-                href="https://github.com/StephenAbbott/bods-validator"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-white transition-colors flex items-center gap-1"
-              >
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
-                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                </svg>
-                Source Code
-              </a>
-              <a
-                href="https://github.com/openownership/lib-cove-bods"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
-              >
-                lib-cove-bods
-              </a>
-              <a
-                href="https://github.com/openownership/visualisation-tool"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
-              >
-                Visualisation Library
-              </a>
-              <a
-                href="https://www.openownership.org/en/publications/beneficial-ownership-visualisation-system/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-500 hover:text-white transition-colors"
-              >
-                BOVS Icons
-              </a>
-            </div>
-          </div>
-        </div>
+      {/* Footer — light style per design system */}
+      <footer
+        className="text-center"
+        style={{
+          padding: 32,
+          fontSize: 12,
+          color: "var(--oo-muted)",
+          borderTop: "1px solid var(--oo-rule)",
+        }}
+      >
+        Built on the{" "}
+        <a
+          href="https://standard.openownership.org/en/0.4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--oo-blue)", textDecoration: "none" }}
+        >
+          Beneficial Ownership Data Standard
+        </a>{" "}
+        by{" "}
+        <a
+          href="https://www.openownership.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--oo-blue)", textDecoration: "none" }}
+        >
+          Open Ownership
+        </a>
+        {" "}&middot;{" "}
+        <a
+          href="https://github.com/StephenAbbott/bods-validator"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--oo-blue)", textDecoration: "none" }}
+        >
+          Source Code
+        </a>
+        {" "}&middot;{" "}
+        <a
+          href="https://creativecommons.org/licenses/by/4.0/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "var(--oo-blue)", textDecoration: "none" }}
+        >
+          CC BY 4.0
+        </a>
       </footer>
     </div>
   );

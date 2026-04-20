@@ -46,20 +46,35 @@ export default function InputPanel({
   const tabClass = (t: Tab) =>
     `px-4 py-2 text-sm font-medium rounded-t-lg transition-colors ${
       tab === t
-        ? "bg-white text-[#652eb1] border border-b-0 border-gray-200"
-        : "text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+        ? "bg-white border border-b-0"
+        : "hover:bg-gray-50"
     }`;
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200">
-      <div className="flex gap-1 px-4 pt-4 border-b border-gray-200">
-        <button className={tabClass("paste")} onClick={() => setTab("paste")}>
+    <div
+      className="bg-white shadow-sm"
+      style={{ borderRadius: 10, border: "1px solid var(--oo-rule)" }}
+    >
+      <div className="flex gap-1 px-4 pt-4" style={{ borderBottom: "1px solid var(--oo-rule)" }}>
+        <button
+          className={tabClass("paste")}
+          style={tab === "paste" ? { color: "var(--oo-blue)", borderColor: "var(--oo-rule)" } : { color: "var(--oo-muted)" }}
+          onClick={() => setTab("paste")}
+        >
           Paste JSON
         </button>
-        <button className={tabClass("upload")} onClick={() => setTab("upload")}>
+        <button
+          className={tabClass("upload")}
+          style={tab === "upload" ? { color: "var(--oo-blue)", borderColor: "var(--oo-rule)" } : { color: "var(--oo-muted)" }}
+          onClick={() => setTab("upload")}
+        >
           Upload File
         </button>
-        <button className={tabClass("url")} onClick={() => setTab("url")}>
+        <button
+          className={tabClass("url")}
+          style={tab === "url" ? { color: "var(--oo-blue)", borderColor: "var(--oo-rule)" } : { color: "var(--oo-muted)" }}
+          onClick={() => setTab("url")}
+        >
           Fetch URL
         </button>
       </div>
@@ -68,7 +83,12 @@ export default function InputPanel({
         {tab === "paste" && (
           <div>
             <textarea
-              className="w-full h-80 font-mono text-sm p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#652eb1] focus:border-transparent resize-y bg-gray-50"
+              className="w-full h-80 font-mono text-sm p-3 resize-y"
+              style={{
+                border: "1px solid var(--oo-rule)",
+                borderRadius: 8,
+                background: "var(--oo-bg)",
+              }}
               placeholder='Paste your BODS JSON data here...&#10;&#10;Example: [{"statementId": "...", "recordType": "entity", ...}]'
               value={jsonValue}
               onChange={(e) => {
@@ -82,7 +102,8 @@ export default function InputPanel({
             <button
               onClick={handlePasteValidate}
               disabled={isLoading || !jsonValue.trim()}
-              className="mt-3 px-6 py-2.5 bg-[#652eb1] text-white rounded-lg font-medium hover:bg-[#5425a0] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="mt-3 px-6 py-2.5 text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              style={{ background: "var(--oo-blue)", borderRadius: 8 }}
             >
               {isLoading ? "Validating..." : "Validate"}
             </button>
@@ -92,7 +113,8 @@ export default function InputPanel({
         {tab === "upload" && (
           <div>
             <div
-              className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-[#652eb1] transition-colors cursor-pointer"
+              className="border-2 border-dashed p-8 text-center cursor-pointer transition-colors"
+              style={{ borderColor: "var(--oo-rule)", borderRadius: 10 }}
               onClick={() => fileRef.current?.click()}
               onDragOver={(e) => e.preventDefault()}
               onDrop={(e) => {
@@ -110,24 +132,25 @@ export default function InputPanel({
               />
               {file ? (
                 <div>
-                  <p className="text-gray-800 font-medium">{file.name}</p>
-                  <p className="text-gray-500 text-sm mt-1">
+                  <p className="font-medium" style={{ color: "var(--oo-ink)" }}>{file.name}</p>
+                  <p className="text-sm mt-1" style={{ color: "var(--oo-muted)" }}>
                     {(file.size / 1024).toFixed(1)} KB
                   </p>
                 </div>
               ) : (
                 <div>
-                  <p className="text-gray-500">
+                  <p style={{ color: "var(--oo-muted)" }}>
                     Drop a .json file here or click to browse
                   </p>
-                  <p className="text-gray-400 text-sm mt-1">Maximum 10MB</p>
+                  <p className="text-sm mt-1" style={{ color: "#b0b0b0" }}>Maximum 10MB</p>
                 </div>
               )}
             </div>
             <button
               onClick={handleFileValidate}
               disabled={isLoading || !file}
-              className="mt-3 px-6 py-2.5 bg-[#652eb1] text-white rounded-lg font-medium hover:bg-[#5425a0] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="mt-3 px-6 py-2.5 text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              style={{ background: "var(--oo-blue)", borderRadius: 8 }}
             >
               {isLoading ? "Validating..." : "Validate"}
             </button>
@@ -138,7 +161,12 @@ export default function InputPanel({
           <div>
             <input
               type="url"
-              className="w-full p-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-[#652eb1] focus:border-transparent bg-gray-50"
+              className="w-full p-3"
+              style={{
+                border: "1px solid var(--oo-rule)",
+                borderRadius: 8,
+                background: "var(--oo-bg)",
+              }}
               placeholder="https://example.com/bods-data.json"
               value={url}
               onChange={(e) => setUrl(e.target.value)}
@@ -149,7 +177,8 @@ export default function InputPanel({
             <button
               onClick={handleUrlValidate}
               disabled={isLoading || !url.trim()}
-              className="mt-3 px-6 py-2.5 bg-[#652eb1] text-white rounded-lg font-medium hover:bg-[#5425a0] disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              className="mt-3 px-6 py-2.5 text-white font-medium disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+              style={{ background: "var(--oo-blue)", borderRadius: 8 }}
             >
               {isLoading ? "Validating..." : "Validate"}
             </button>

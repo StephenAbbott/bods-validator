@@ -230,8 +230,18 @@ export default function VisualisationPanel({ data }: Props) {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm border border-gray-200">
-      <div className="p-4 border-b border-gray-200 bg-gradient-to-r from-[#652eb1]/5 to-[#349aee]/5">
+    <div
+      className="bg-white shadow-sm"
+      style={{ borderRadius: 10, border: "1px solid var(--oo-rule)" }}
+    >
+      <div
+        className="p-4"
+        style={{
+          borderBottom: "1px solid var(--oo-rule)",
+          background: "rgba(61,48,212,0.03)",
+          borderRadius: "10px 10px 0 0",
+        }}
+      >
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="flex gap-1.5">
@@ -239,22 +249,23 @@ export default function VisualisationPanel({ data }: Props) {
               <svg width="20" height="12" viewBox="0 0 20 12" className="self-center">
                 <defs>
                   <marker id="arr" markerWidth="6" markerHeight="4" refX="5" refY="2" orient="auto">
-                    <path d="M0,0 L6,2 L0,4" fill="#652eb1" />
+                    <path d="M0,0 L6,2 L0,4" fill="var(--oo-blue, #3d30d4)" />
                   </marker>
                 </defs>
-                <line x1="0" y1="6" x2="14" y2="6" stroke="#652eb1" strokeWidth="2" markerEnd="url(#arr)" />
+                <line x1="0" y1="6" x2="14" y2="6" stroke="var(--oo-blue, #3d30d4)" strokeWidth="2" markerEnd="url(#arr)" />
               </svg>
               <img src="/bods-images/bovs-organisation.svg" alt="" className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900">Ownership Visualisation</h3>
-              <p className="text-xs text-gray-500">
+              <h3 className="font-bold" style={{ color: "var(--oo-navy)" }}>Ownership Visualisation</h3>
+              <p className="text-xs font-mono" style={{ color: "var(--oo-muted)", fontSize: 11 }}>
                 Powered by the{" "}
                 <a
                   href="https://github.com/openownership/visualisation-tool"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#652eb1] hover:underline"
+                  className="hover:underline"
+                  style={{ color: "var(--oo-blue)" }}
                 >
                   BODS Visualisation Library
                 </a>
@@ -265,7 +276,8 @@ export default function VisualisationPanel({ data }: Props) {
             <button
               onClick={handleRender}
               disabled={loading}
-              className="px-4 py-2 bg-[#652eb1] text-white rounded-lg text-sm font-medium hover:bg-[#5425a0] transition-colors flex items-center gap-2 disabled:opacity-50"
+              className="px-4 py-2 text-white text-sm font-medium transition-colors flex items-center gap-2 disabled:opacity-50"
+              style={{ background: "var(--oo-blue)", borderRadius: 8 }}
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <circle cx="4" cy="4" r="2.5" stroke="currentColor" strokeWidth="1.5" />
@@ -300,23 +312,24 @@ export default function VisualisationPanel({ data }: Props) {
             <img src="/bods-images/bovs-organisation.svg" alt="" className="w-10 h-10" />
             <img src="/bods-images/bovs-arrangement.svg" alt="" className="w-10 h-10" />
           </div>
-          <p className="text-gray-500 text-sm">
+          <p className="text-sm" style={{ color: "var(--oo-muted)" }}>
             Your validated BODS data can be visualised as an interactive ownership diagram.
           </p>
-          <p className="text-gray-400 text-xs mt-1">
+          <p className="text-xs mt-1" style={{ color: "#b0b0b0" }}>
             Uses the{" "}
             <a
               href="https://www.openownership.org/en/publications/beneficial-ownership-visualisation-system/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#652eb1] hover:underline"
+              className="hover:underline"
+              style={{ color: "var(--oo-blue)" }}
             >
               Beneficial Ownership Visualisation System (BOVS)
             </a>{" "}
             icons and conventions.
             <span className="inline-block ml-1">
-              <span className="text-[#652eb1]">Purple</span> = ownership,{" "}
-              <span className="text-[#349aee]">cyan</span> = control.
+              <span style={{ color: "var(--bovs-own)" }}>Purple</span> = ownership,{" "}
+              <span style={{ color: "var(--bovs-control)" }}>cyan</span> = control.
             </span>
           </p>
         </div>
