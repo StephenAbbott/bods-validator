@@ -49,7 +49,7 @@ export default function DataComparisonPanel({
 
   const originalJson = JSON.stringify(originalData, null, 2);
 
-  const tabClass = (v: string) =>
+  const tabClass = (_v: string) =>
     `px-3 py-1.5 text-xs font-medium transition-colors`;
 
   return (
