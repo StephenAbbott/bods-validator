@@ -6,6 +6,8 @@ An online tool for validating beneficial ownership data against the [Beneficial 
 
 **Live demo:** [bods-validator.onrender.com](https://bods-validator.onrender.com/)
 
+Part of the [BODS Interoperability Toolkit](https://github.com/StephenAbbott/bods-interoperability-toolkit).
+
 ## Features
 
 - **Schema Validation** — Validate JSON data against the BODS 0.4 schema using [lib-cove-bods](https://pypi.org/project/libcovebods/), which performs JSON schema validation plus 26 additional compliance checks
