@@ -98,36 +98,51 @@ ADVICE_MAP = {
 }
 
 
+def _location_of(err):
+    """Human-readable path to the data that triggered a schema error."""
+    return "/".join(str(p) for p in err.get("path", [])) or "root"
+
+
+# Cap the number of locations embedded per advice item so a file with
+# thousands of identical errors doesn't bloat the response. The full count is
+# always preserved separately.
+MAX_LOCATIONS_PER_ADVICE = 50
+
+
 def generate_advice(schema_errors, additional_checks, additional_fields):
     advice = []
-    error_counts = {}
 
+    # Group schema errors by (validator, missing-field) so each distinct
+    # problem becomes one advice item that lists every place it occurs,
+    # rather than collapsing all errors of a type to a single first location.
+    error_groups = {}
     for err in schema_errors:
         validator = err.get("validator", "unknown")
-        if validator not in error_counts:
-            error_counts[validator] = 0
-        error_counts[validator] += 1
+        field = err.get("extra", {}).get("required_key_which_is_missing", "")
+        key = (validator, field)
+        group = error_groups.setdefault(
+            key, {"validator": validator, "field": field, "locations": []}
+        )
+        group["locations"].append(_location_of(err))
 
-    for validator, count in error_counts.items():
+    for (validator, field), group in error_groups.items():
         mapping = ADVICE_MAP.get(validator, {
             "level": "error",
             "template": f"Schema validation error ({validator}).",
             "guidance": "Check the BODS schema reference for the correct data structure.",
             "docs_url": "https://standard.openownership.org/en/0.4.0/schema/reference.html",
         })
-        field = ""
-        path = ""
-        for err in schema_errors:
-            if err.get("validator") == validator:
-                field = err.get("extra", {}).get("required_key_which_is_missing", "")
-                path = "/".join(str(p) for p in err.get("path", [])) or "root"
-                break
+        locations = group["locations"]
+        first_path = locations[0] if locations else "root"
         advice.append({
             "level": mapping["level"],
-            "message": mapping["template"].format(field=field, path=path, id=""),
+            "message": mapping["template"].format(field=field, path=first_path, id=""),
             "guidance": mapping["guidance"],
             "docs_url": mapping["docs_url"],
-            "count": count,
+            "count": len(locations),
+            "field": field,
+            "locations": locations[:MAX_LOCATIONS_PER_ADVICE],
+            "locations_truncated": len(locations) > MAX_LOCATIONS_PER_ADVICE,
         })
 
     check_counts = {}

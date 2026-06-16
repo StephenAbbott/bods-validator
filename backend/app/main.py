@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 from typing import Union
 from fastapi import FastAPI, Request, UploadFile, File, HTTPException
+from fastapi.concurrency import run_in_threadpool
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
@@ -53,7 +54,9 @@ async def example_detail(example_id: str):
 @app.post("/api/validate")
 async def validate_json(request: Request):
     data = await request.json()
-    result = validate_bods_data(data)
+    # validate_bods_data is synchronous and CPU-bound; run it in a worker
+    # thread so it doesn't block the event loop (and other requests).
+    result = await run_in_threadpool(validate_bods_data, data)
     return result
 
 
@@ -70,7 +73,7 @@ async def validate_file(file: UploadFile = File(...)):
     except json.JSONDecodeError as e:
         raise HTTPException(status_code=400, detail=f"Invalid JSON: {str(e)}")
 
-    result = validate_bods_data(data)
+    result = await run_in_threadpool(validate_bods_data, data)
     return result
 
 
@@ -92,7 +95,7 @@ async def validate_url(request: URLRequest):
             status_code=400, detail=f"URL did not return valid JSON: {str(e)}"
         )
 
-    result = validate_bods_data(data)
+    result = await run_in_threadpool(validate_bods_data, data)
     return result
 
 

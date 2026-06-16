@@ -147,6 +147,13 @@ function AdviceTab({ advice }: { advice: ValidationResult["advice"] }) {
                   )}
                 </p>
                 <p className="text-sm mt-1" style={{ color: "var(--oo-muted)" }}>{a.guidance}</p>
+                {a.locations && a.locations.length > 0 && (
+                  <AdviceLocations
+                    locations={a.locations}
+                    total={a.count}
+                    truncated={a.locations_truncated}
+                  />
+                )}
                 <a
                   href={a.docs_url}
                   target="_blank"
@@ -161,6 +168,55 @@ function AdviceTab({ advice }: { advice: ValidationResult["advice"] }) {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function AdviceLocations({
+  locations,
+  total,
+  truncated,
+}: {
+  locations: string[];
+  total: number;
+  truncated?: boolean;
+}) {
+  const [showAll, setShowAll] = useState(false);
+  const PREVIEW = 5;
+  const visible = showAll ? locations : locations.slice(0, PREVIEW);
+  const hiddenInList = locations.length - visible.length;
+
+  return (
+    <div className="mt-2">
+      <p className="text-xs font-medium mb-1" style={{ color: "var(--oo-muted)" }}>
+        {total === 1 ? "Location:" : `Locations (${total}):`}
+      </p>
+      <div className="flex flex-wrap gap-1">
+        {visible.map((loc, i) => (
+          <code
+            key={i}
+            className="text-xs px-1.5 py-0.5 rounded"
+            style={{ background: "var(--oo-bg)", color: "var(--oo-ink)" }}
+          >
+            /{loc}
+          </code>
+        ))}
+      </div>
+      {(hiddenInList > 0 || (showAll && locations.length > PREVIEW)) && (
+        <button
+          onClick={() => setShowAll((v) => !v)}
+          className="text-xs hover:underline mt-1"
+          style={{ color: "var(--oo-blue)" }}
+        >
+          {showAll ? "Show fewer" : `Show ${hiddenInList} more`}
+        </button>
+      )}
+      {truncated && (
+        <p className="text-xs mt-1" style={{ color: "var(--oo-muted)" }}>
+          Only the first {locations.length} locations are listed. See the Schema
+          Errors tab for the complete list.
+        </p>
+      )}
     </div>
   );
 }

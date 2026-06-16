@@ -38,6 +38,9 @@ export interface Advice {
   guidance: string;
   docs_url: string;
   count: number;
+  field?: string;
+  locations?: string[];
+  locations_truncated?: boolean;
 }
 
 export interface ExampleSummary {
