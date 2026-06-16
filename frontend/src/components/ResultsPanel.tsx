@@ -54,10 +54,24 @@ export default function ResultsPanel({ results }: Props) {
             <h3 className="font-bold" style={{ color: "var(--oo-navy)" }}>{statusText}</h3>
             <p className="text-sm" style={{ color: "var(--oo-muted)" }}>
               {results.schema_version && `BODS version: ${results.schema_version}`}
-              {results.sample_mode && " (sample mode)"}
             </p>
           </div>
         </div>
+        {results.sample_mode && (
+          <div
+            className="mt-3 p-3 text-sm border border-amber-300 bg-amber-50"
+            style={{ borderRadius: 8 }}
+          >
+            <span className="font-semibold" style={{ color: "var(--oo-ink)" }}>
+              {"⚠️"} Sample mode — only part of this dataset was checked.
+            </span>{" "}
+            <span style={{ color: "var(--oo-muted)" }}>
+              Because the file is large, validation ran against a sample of
+              statements, so these results may not reflect the entire file. To
+              validate every statement, split it into smaller files.
+            </span>
+          </div>
+        )}
         {results.error && (
           <p className="mt-2 text-sm text-red-700 bg-red-100 p-2 rounded">
             {results.error}

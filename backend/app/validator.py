@@ -1,6 +1,9 @@
+import functools
 import json
 import tempfile
 import os
+import libcovebods.schema as _cove_schema
+import libcovebods.schema_dir as _cove_schema_dir
 from libcovebods.data_reader import DataReader
 from libcovebods.config import LibCoveBODSConfig
 from libcovebods.schema import SchemaBODS
@@ -9,6 +12,37 @@ from libcovebods.run_tasks import process_additional_checks, TASK_CLASSES, TASK_
 from libcovebods.additionalfields import AdditionalFields
 
 SAMPLE_MODE_THRESHOLD = 1000
+
+
+def _install_schema_caches():
+    """Memoise the BODS schema loaders so the schema is parsed once, not per request.
+
+    For BODS 0.4, ``SchemaBODS._pkg_schema_obj`` is a plain property that calls
+    ``schema_registry()`` — reading every schema file from disk and rebuilding
+    the jsonschema registry — on *every* access, and it is accessed several
+    times per validation. The packaged schema files never change at runtime, so
+    we wrap the two loader functions in an ``lru_cache`` keyed on the schema
+    directory/component. The cached objects (a ``referencing.Registry`` and
+    plain dicts) are only read by lib-cove-bods, so sharing them across requests
+    and worker threads is safe. The patch is applied to both the origin module
+    and the ``schema`` module that imported the names by value.
+    """
+    if getattr(_cove_schema_dir, "_bods_schema_cache_installed", False):
+        return
+    cached_registry = functools.lru_cache(maxsize=16)(_cove_schema_dir.schema_registry)
+    cached_file_data = functools.lru_cache(maxsize=64)(
+        _cove_schema_dir.get_scheme_file_data
+    )
+    for _mod in (_cove_schema_dir, _cove_schema):
+        _mod.schema_registry = cached_registry
+        _mod.get_scheme_file_data = cached_file_data
+    _cove_schema_dir._bods_schema_cache_installed = True
+
+
+_install_schema_caches()
+
+# Build the lib-cove-bods config once and reuse it (it is read-only).
+_CONFIG = LibCoveBODSConfig()
 
 ADVICE_MAP = {
     "required": {
@@ -198,7 +232,7 @@ def validate_bods_data(data, sample_mode=False):
             sample_mode = True
 
         data_reader = DataReader(temp_path, sample_mode=sample_mode)
-        config = LibCoveBODSConfig()
+        config = _CONFIG
         schema = SchemaBODS(data_reader, config)
 
         # 1. JSON Schema validation
